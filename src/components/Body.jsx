@@ -53,27 +53,28 @@ const Body = () => {
   }, [chatHistory]);
 
   return (
-    <div id="chatBody" className="bg-[#F0F9FF] border-0 shadow-lg drop-shadow-2xl h-[85vh] md:h-[500px] w-full max-w-[95vw] md:max-w-[500px] flex flex-col">
+    <div id="chatBody" className="bg-[#F0F9FF] border-0 shadow-lg drop-shadow-2xl h-[70vh] md:h-[500px] w-full max-w-[100vw] md:max-w-[500px] flex flex-col">
       <div
-        className="scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300 flex-1 overflow-y-auto px-4 md:px-6 py-3 md:py-4"
+        className="scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300 flex-1 overflow-y-auto px-5 md:px-6 py-3 md:py-4 overflow-x-hidden"
         aria-live="polite"
         ref={chatBodyRef}
       >
-        <div className="flex gap-2 md:gap-3 mb-4 items-center">
+      
+        <div className="flex gap-2 md:gap-3 mb-4 items-center mx-2">
           <ChatBotIcon />
-          <p className="bg-[#2563EB] rounded-lg max-w-[85%] md:max-w-[70%] p-3 text-sm md:text-base text-[#000000]">
+          <p className="bg-[#2563EB] rounded-lg max-w-[90%] md:max-w-[70%] p-3 text-sm md:text-base text-[#000000] mr-2">
             Hey there!👋 <br /> How can I help you?
           </p>
         </div>
 
-        <div className="space-y-4">
+   
+        <div className="space-y-4 mx-2">
           {chatHistory.map((chat, index) => (
             <ChatMessage key={index} chat={chat} />
           ))}
         </div>
       </div>
 
-      {/* Footer */}
       <Footer
         chatHistory={chatHistory}
         setchatHistory={setChatHistory}

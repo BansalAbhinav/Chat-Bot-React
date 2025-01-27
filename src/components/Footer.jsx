@@ -31,24 +31,25 @@ const Footer = ({ chatHistory, setchatHistory, generateActualBotResponse }) => {
   };
 
   return (
-    <div className="bg-white px-4 py-3 shadow-md ">
+    <div className="bg-white px-3 md:px-4 py-3 shadow-md border-t border-blue-100">
       <form
-        action="#"
         onSubmit={handleFormSubmit}
-        className="flex items-center gap-3"
+        className="flex items-center gap-2 md:gap-3"
       >
         <input
           ref={inputRef}
           type="text"
           placeholder="Message..."
           required
-          className="flex-grow bg-blue-100 border-2 border-blue-300 rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 bg-blue-100 border-2 border-blue-300 rounded-lg px-3 md:px-4 py-2 md:py-3 text-sm md:text-base outline-none focus:ring-2 focus:ring-blue-500 ring-offset-1 transition-all"
         />
         <button
           type="submit"
-          className="rounded-full flex items-center justify-center h-10 w-10 bg-blue-400 text-white hover:bg-blue-300 transition-colors ease-in-out"
+          className="rounded-full flex items-center justify-center h-12 w-12 md:h-10 md:w-10 bg-blue-400 text-white hover:bg-blue-500 transition-colors ease-in-out active:scale-95"
         >
-          <span className="material-symbols-rounded">keyboard_arrow_up</span>
+          <span className="material-symbols-rounded text-2xl md:text-xl">
+            keyboard_arrow_up
+          </span>
         </button>
       </form>
     </div>

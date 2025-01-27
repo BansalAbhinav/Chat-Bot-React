@@ -29,3 +29,20 @@
       background-position: 0% 50%;
     }
   }
+
+  @keyframes gradient-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animate-gradient-flow {
+    animation: gradient-flow 8s ease infinite;
+    -webkit-animation: gradient-flow 8s ease infinite;
+  }
